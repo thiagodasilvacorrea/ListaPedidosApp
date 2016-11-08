@@ -1,0 +1,29 @@
+<ion-content >
+	<ion-list class="Container50">
+		    <ion-item *ngFor="let pedido of PedidoList">
+                <div class="Container33 TextList">{{pedidos.id}}</div>
+			    <div class="Container33 TextList">{pedidos.status_pedido}}</div>
+                <div class="Container33 TextList">
+                    <button (click)="viewPedido(pedido)">
+                        <ion-icon name="search"></ion-icon>
+                    </button>
+                </div>
+		    </ion-item>
+	</ion-list>
+    <ion-card class="PedidoData" *ngIf="mostrarDetalhes">
+                <ion-item>
+                    <ion-label>Título:</ion-label>
+                    <ion-label>{{selectedPedido.title}}</ion-label>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Id:</ion-label>
+                    <ion-label>{{selectedPedido.id}}</ion-label>
+                </ion-item>
+            
+                <ion-item>
+                        <ion-label>User id:</ion-label>
+                    <ion-label>{{selectedPedido.userId}}</ion-label>
+                </ion-item>
+        </ion-card> 
+</ion-content>
